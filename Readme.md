@@ -1,41 +1,32 @@
 # Project Title
-
-
+Final_Project_EthProof_Beginner
 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
+The Project is about creating a token and transact in the wallet by minting and burnign tokens values.
 
 ## Getting Started
 
-### Installing
-
-* How/where to download your program
-* Any modifications needed to be made to files/folders
-
 ### Executing program
 
-* How to run the program
-* Step-by-step bullets
-```
-code blocks for commands
-```
+1. Start Remix IDE on Browser.
+2. create Filename.sol
+3. Copy the Code and paste in that File
+4. Great! Now compile and Deployt he code
+You are good to go!
 
 ## Help
 
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
-```
+Check your solidity version Carefully and Select the compatible version only.
 
 ## Authors
 
 Contributors names and contact info
 
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
+Ayush Kansal
+[https://x.com/Aykan031]
 
 
 ## License
 
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
+This project is licensed under the MIT License - see the LICENSE.md file for details
