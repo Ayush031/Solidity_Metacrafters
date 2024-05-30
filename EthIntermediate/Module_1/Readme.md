@@ -1,5 +1,5 @@
 # Election Voting Elibility SmartContract
-* Eth_Intermediate_Module_1 Project
+Eth_Intermediate_Module_1 Project
 
 ## Description
 
