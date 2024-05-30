@@ -8,7 +8,7 @@ Election Voting Elibility Contract
 
 * This project demonstrate the use of "Error Handling Functions" {Assert(), Require(), Revert()}.
 
-*->* Firstly User will enter his age as a parameter and it can be validated using the three given functions.
+* - Firstly User will enter his age as a parameter and it can be validated using the three given functions.
 
 * If age>18 or age<80 then only user is eligible else, he will get an error.
 
