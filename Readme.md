@@ -24,7 +24,7 @@ Check your solidity version Carefully and Select the compatible version only.
 Contributors names and contact info
 
 Ayush Kansal
-[https://x.com/Aykan031]
+[@Aykansal](https://linkedin.com/aykansal)
 
 
 ## License
