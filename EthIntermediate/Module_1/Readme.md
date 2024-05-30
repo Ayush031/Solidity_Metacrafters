@@ -1,6 +1,4 @@
-# Project Title
-
-Election Voting Elibility Contract
+# Election Voting Elibility SmartContract
 (Eth_Intermediate_Module_1 Project)
 
 ## Description
@@ -17,7 +15,7 @@ Election Voting Elibility Contract
 2. Create Filename.sol .
 3. Copy the Code and paste in that File.
 4. Great! Now compile and Deploy the code.
-<br>You are good to go!
+<br><br>You are good to go!!
 
 ## Help
 
