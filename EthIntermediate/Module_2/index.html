@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Import EthersJs with CDN Script -->
   <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <title>Arithmetic Counter DApp</title>
@@ -11,16 +12,25 @@
 
 <body class="max-h-screen bg-green-300 max-w-screen text-center flex flex-col items-center m-10 box-border border border-[3.5px] border-white rounded-3xl p-6 overflow-hidden">
   <div class="text-center content-center h-10 w-screen text-3xl font-semibold">Arithmetic Counter DApp</div>
+
+  <!-- Connect To Metamask Btn -->
   <button class="bg-blue-500 text-white p-2 rounded-xl m-5 pr-4 pl-4 font-medium " id="connectButton">Connect to MetaMask</button>
+
+  <!-- Get Wallet Address & Balance -->
   <div class=" bg-white m-3 p-5 rounded-2xl w-auto font-medium ">
     <p class="text-xl mb-2 text-left">Wallet Address : <span id="walletAddress" class="font-normal"></span></p>
     <p class="text-xl mt-2 text-left">Wallet Balance : <span id="walletBalance" class="font-normal"></span></p>
   </div>
+
   <div class="flex justify-center items-center p-10 gap-16 text-lg ">
+    
+    <!-- Counter Increment Function -->
     <div id="counterSection" class=" bg-white rounded-2xl p-5 flex flex-col gap-2">
       <p class="text-start font-medium">Current Counter : <span class="font-normal" id="counter"></span></p>
       <button class="p-2 rounded-lg bg-blue-500 text-white" id="incrementButton">Increment Counter</button>
     </div>
+
+    <!-- Arithmetic Sum Calculator -->
     <div id="arithmeticSection" class="bg-white rounded-2xl flex flex-col gap-2 p-5">
       <div>
         <label for="input1" class="font-medium">Number 1 :</label>

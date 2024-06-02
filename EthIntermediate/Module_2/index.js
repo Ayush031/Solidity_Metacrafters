@@ -82,6 +82,7 @@ const abi = [
 let provider;
 let signer;
 let contract;
+let connectedAddress;
 
 async function getWalletBalance(address) {
 	try {
@@ -99,7 +100,7 @@ async function connectToMetaMask() {
 	if (window.ethereum) {
 		try {
 			const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
-			const connectedAddress = accounts[0];
+			connectedAddress = accounts[0];
 			provider = new ethers.providers.Web3Provider(window.ethereum);
 			signer = provider.getSigner();
 			document.getElementById('walletAddress').innerText = connectedAddress;
@@ -116,15 +117,18 @@ async function connectToMetaMask() {
 
 async function incrementCounter() {
 	try {
+		const contract = new ethers.Contract(contractAddress, abi, signer);
 		const tx = await contract.incrementCounter();
 		await tx.wait();
-		const updatedCount = await contract.getCounter();
-		console.log("Updated counter:", updatedCount);
+		let updatedCount = await contract.getCounter();
 		document.getElementById('counter').innerText = updatedCount;
+		console.log("Updated counter:", updatedCount);
+		getWalletBalance(connectedAddress);
 	} catch (error) {
 		console.error("Error incrementing counter:", error);
 	}
 }
+document.getElementById('incrementButton').addEventListener('click', incrementCounter);
 
 async function performArithmetic() {
 	const operand1 = document.getElementById("input1").value;
@@ -137,15 +141,14 @@ async function performArithmetic() {
 		const calculatedResult = await contract.getArithmeticResult();
 		document.getElementById('result').innerText = calculatedResult;
 		console.log("Calculated result:", calculatedResult);
+		getWalletBalance(connectedAddress);
 	} catch (error) {
 		console.error("Error performing arithmetic:", error);
 	}
 }
-
-let connectButton = document.getElementById('connectButton');
-connectButton.addEventListener('click', connectToMetaMask);
-
-
-document.getElementById('incrementButton').addEventListener('click', incrementCounter);
-
 document.getElementById('calculateButton').addEventListener('click', performArithmetic);
+
+document.getElementById('connectButton').addEventListener('click', connectToMetaMask);
+
+
+
