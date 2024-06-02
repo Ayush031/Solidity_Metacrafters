@@ -35,8 +35,7 @@ The Solidity contract, Counter.sol, contains the following functions:
 5. Copy the ABI and Contract Address.
 6. Paste them in the index.js file in respective given variables.
 7. Launch the HTML page keeping both index.html and index.js in the SAME directory.
-
-<br><br>You are good to go!!
+<br>You are good to go!!
 
 ## Help - Validate the following 
 * The Solidity Compiler Version and match with the deployment compiler to run smart contract succesfully.
