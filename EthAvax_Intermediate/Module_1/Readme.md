@@ -1,18 +1,15 @@
-# Election Voting Elibility SmartContract
+# Visa Booking application
 EthAvax_Intermediate_Module_1 Project
 
 ## Description
 
 * This project demonstrate the use of "Error Handling Functions" {Assert(), Require(), Revert()}.
-
-* Firstly User will enter his age as a parameter and it can be validated using the three given functions.
-
-* If age>18 or age<80 then only user is eligible else, he will get an error.
+* The "Visa" smart contract manages visa applications, allowing candidates from India and Russia while restricting UK and Germany. It stores candidate data, handles passport creation and updates, and verifies eligibility based on nationality for visa applications.
 
 ### Executing program
 
 1. Start [Remix IDE](https://remix.ethereum.org/) on Browser.
-2. Create Filename.sol .
+2. Create Visa.sol 
 3. Copy the Code and paste in that File.
 4. Great! Now compile and Deploy the code.
 
