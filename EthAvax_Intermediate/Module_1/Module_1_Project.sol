@@ -2,23 +2,21 @@
 pragma solidity ^0.8.26;
 
 contract Visa {
-    // India and Russia allowed for visa , UK and Germany not allowed.
+    // Canada and USA allowed for visa , Russia and China not allowed.
     enum nation {
         Canada,
         USA,
         Russia,
         China
     }
-
-    //createing a structure to keep data of candidate.
+    //creating a structure to keep data of candidate.
     struct candidates {
         string name;
-        uint age;
-        uint phNo;
-        nation nationality;
+        uint256 age;
+        uint256 phNo;
         bool isHavingPassport;
+        nation nationality;
     }
-
     //mapping of candidate struct with address.
     mapping(address => candidates) public candidate;
 
@@ -26,8 +24,8 @@ contract Visa {
     function addCandidate(
         address _candidateAddress,
         string memory _name,
-        uint _age,
-        uint _phNo,
+        uint256 _age,
+        uint256 _phNo,
         nation _nationality,
         bool _isHavingPassport
     ) public {
@@ -39,9 +37,10 @@ contract Visa {
     }
 
     //fucntion to create a new passport only if age is greate that 18.
-    function createNewPassport(
-        address _candidateAddress
-    ) public returns (bool) {
+    function createNewPassport(address _candidateAddress)
+        public
+        returns (bool)
+    {
         //using require err handling if age fall below 18.
         require(
             candidate[_candidateAddress].age >= 18,
@@ -55,7 +54,7 @@ contract Visa {
     //function to update the passport
     function updatePassport(
         address _candidateAddress,
-        uint _newPhoneNo
+        uint256 _newPhoneNo
     ) public returns (candidates memory, string memory) {
         //revert() is used to handle is passport doesen't exists.
         if (candidate[_candidateAddress].isHavingPassport != true) {
@@ -66,18 +65,22 @@ contract Visa {
     }
 
     //function to apply for visa
-    function applyVisa(
-        address _candidateAddress
-    ) public view returns (string memory) {
+    function applyVisa(address _candidateAddress)
+        public
+        view
+        returns (string memory)
+    {
         //revert() used to handle if candidate has pasport or not
         if (candidate[_candidateAddress].isHavingPassport != true) {
             revert("No existing passport to update, first create a new one");
         }
         //assert() is used to check the eligible nationality
+
         assert(
             candidate[_candidateAddress].nationality == nation.Canada ||
                 candidate[_candidateAddress].nationality == nation.USA
         );
+                
         return ("visa applied successfully");
     }
 }
