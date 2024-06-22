@@ -266,7 +266,7 @@ const walletAbi = [
 		"type": "receive"
 	}
 ];
-const walletFactoryAddress = "0x1a33a58eBCf8A1a3BFD2c3A241cB491C64b9dFC4";
+const walletFactoryAddress = "0x8802cc210dF18527A5a76d75AD1DcDf21cEbc6d2";
 
 let provider;
 let signer;
